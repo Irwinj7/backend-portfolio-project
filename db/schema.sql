@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS post_dev;
+DROP DATABASE IF EXISTS posts_dev;
 CREATE DATABASE posts_dev;
 
 \c posts_dev;
@@ -8,7 +8,7 @@ CREATE TABLE posts (
  name TEXT NOT NULL,
  url TEXT,
  category TEXT,
- price NUMBER,
+ price INTEGER,
  is_favorite BOOLEAN
 );
 
@@ -20,6 +20,5 @@ CREATE TABLE descriptions (
  title TEXT,
  content TEXT,
  post_id INTEGER REFERENCES posts (id)
- post_price INTEGER REFERENCES posts (price)
  ON DELETE CASCADE
 );
