@@ -1,10 +1,9 @@
 \c posts_dev;
 
-INSERT INTO posts (name, url, category, is_favorite) VALUES
-('MDN', 'https://developer.mozilla.org/en-US/', 'educational', true),
-('Apartment Therapy', 'https://www.apartmenttherapy.com', 'inspirational', true),
-('DMV', 'https://dmv.ny.gov', 'adulting', true);
+INSERT INTO posts (name, url, category, price, is_favorite) VALUES
+('Gaming Chair', 'Secret Lab 202', 'chair', 200, true);
 
-INSERT INTO descriptions (post_id, author, title, content, rating)
+
+INSERT INTO descriptions (post_id, author, title, content)
 VALUES
-('1', 'Evan', 'My Favorite', 'This website crushes it when it comes to awesome explanations', 3),
+('1', 'Mike hawk', 'Selling my gaming chair', 'hey there all, i have a lightly used gaming chair for sale');

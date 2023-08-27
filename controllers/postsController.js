@@ -10,7 +10,7 @@ const {
 } = require("../queries/posts");
 const { checkName, checkBoolean, validateURL } = require("../validations/checkPosts.js");
 const descriptionsController = require("./descriptionsController.js");
-posts.use("/:postId/description", descriptionsController);
+posts.use("/:postId/descriptions", descriptionsController);
 
 // INDEX
 posts.get("/", async (req, res) => {
