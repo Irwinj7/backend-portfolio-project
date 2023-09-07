@@ -8,7 +8,7 @@ const {
   newDescription,
   deleteDescription,
   updateDescription,
-} = require("../queries/descriptions");
+} = require("../queries/descriptions.js");
 
 // INDEX
 descriptions.get("/", async (req, res) => {
@@ -63,7 +63,7 @@ descriptions.delete("/:id", async (req, res) => {
 
 // TEST JSON NEW
 // {
-//     "reviewer":"Lou",
+//     "author":"Lou",
 //      "title": "Fryin Better",
 //      "content": "With the great tips and tricks I found here",
 //      "post_id": "2",

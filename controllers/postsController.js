@@ -9,7 +9,7 @@ const {
   updatePost,
 } = require("../queries/posts");
 const { checkName, checkBoolean, validateURL } = require("../validations/checkPosts.js");
-const descriptionsController = require("./descriptionsController.js");
+const descriptionsController = require("./offersController.js");
 posts.use("/:postId/descriptions", descriptionsController);
 
 // INDEX

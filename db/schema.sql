@@ -8,16 +8,17 @@ CREATE TABLE posts (
  name TEXT NOT NULL,
  url TEXT,
  category TEXT,
- price INTEGER,
+ price NUMBER NOT NULL,
  is_favorite BOOLEAN
 );
 
-DROP TABLE IF EXISTS descriptions;
+DROP TABLE IF EXISTS offers;
 
-CREATE TABLE descriptions (
+CREATE TABLE offers (
  id SERIAL PRIMARY KEY,
  author TEXT,
  title TEXT,
+ price TEXT,
  content TEXT,
  post_id INTEGER REFERENCES posts (id)
  ON DELETE CASCADE
