@@ -8,7 +8,7 @@ CREATE TABLE posts (
  name TEXT NOT NULL,
  url TEXT,
  category TEXT,
- price NUMBER NOT NULL,
+ price INTEGER NOT NULL,
  is_favorite BOOLEAN
 );
 

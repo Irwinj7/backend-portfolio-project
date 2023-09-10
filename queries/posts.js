@@ -24,8 +24,8 @@ const getPost = async (id) => {
 const createPost = async (post) => {
   try {
     const newPost = await db.one(
-      "INSERT INTO posts (name, url, category, is_favorite) VALUES($1, $2, $3, $4) RETURNING *",
-      [post.name, post.url, post.category, post.is_favorite]
+      "INSERT INTO posts (name, url, category, price, is_favorite) VALUES($1, $2, $3, $4, $5) RETURNING *",
+      [post.name, post.url, post.category, post.price, post.is_favorite]
     );
     return newPost;
   } catch (error) {
@@ -50,8 +50,8 @@ const deletePost = async (id) => {
 const updatePost = async (id, post) => {
   try {
     const updatedPost = await db.one(
-      "UPDATE posts SET name=$1, url=$2, category=$3, is_favorite=$4 where id=$5 RETURNING *",
-      [post.name, post.url, post.category, post.is_favorite, id]
+      "UPDATE posts SET name=$1, url=$2, category=$3, is_favorite=$4, price=$5 where id=$6 RETURNING *",
+      [post.name, post.url, post.category, post.is_favorite, post.price, id]
     );
     return updatedPost;
   } catch (error) {
